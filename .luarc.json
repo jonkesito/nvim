@@ -1,0 +1,10 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "luasnip"
+    ],
+    "diagnostics.disable": [
+        "unused-local",
+        "undefined-doc-name"
+    ]
+}
