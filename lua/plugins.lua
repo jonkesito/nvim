@@ -3,7 +3,6 @@ return {
     "antonyz89/electron-vue.nvim",
     dependencies = { "rktjmp/lush.nvim" },
   },
-
   {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
@@ -28,4 +27,3 @@ return {
     "windwp/nvim-ts-autotag",
   },
 }
-
