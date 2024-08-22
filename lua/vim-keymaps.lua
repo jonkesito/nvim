@@ -8,7 +8,7 @@ keymap.set('n', '<leader>cc', ':colorscheme electron-vue-darker<CR>')
 
 keymap.set('n', 'x', '"_x')
 
-keymap.set('i', 'JK', '<esc>')
+keymap.set('i', 'jk', '<esc>')
 
 -- Increment/decrement
 keymap.set('n', '+', '<C-a>')
@@ -60,3 +60,6 @@ keymap.set('', '<Leader>q', ':q!<CR>')
 
 -- visual block
 keymap.set('', '<Leader>v', '<C-v>')
+
+-- Clear search highlight
+keymap.set('', '<Leader>nh', ':noh<CR>')

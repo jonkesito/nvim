@@ -1,10 +1,22 @@
 return {
 	{
+		"roobert/tailwindcss-colorizer-cmp.nvim",
+		-- optionally, override the default options:
+		config = function()
+			require("tailwindcss-colorizer-cmp").setup({
+				color_square_width = 2,
+			})
+		end,
+	},
+	{
 		"hrsh7th/nvim-cmp",
 		config = function()
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
 			require("luasnip.loaders.from_vscode").lazy_load()
+			cmp.config.formatting = {
+				format = require("tailwindcss-colorizer-cmp").formatter,
+			}
 
 			cmp.setup({
 				snippet = {
@@ -44,7 +56,7 @@ return {
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
-					{ name = "codeium" }
+					{ name = "codeium" },
 				}, {
 					{ name = "buffer" },
 				}),
